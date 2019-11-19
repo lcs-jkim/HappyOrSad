@@ -15,6 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+// MARK PROPERTIES
+    @IBOutlet weak var TextField: UITextField!
+    @IBOutlet weak var AnswerBox: UILabel!
+    
+    
+    @IBAction func Analyze(_ sender: Any) {
+        
+        guard TextField.text != nil else {
+            return
+            }
+    
+    }
+    
 }
 
