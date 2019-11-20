@@ -9,34 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-// MARK PROPERTIES
+    
     @IBOutlet weak var TextField: UITextField!
     @IBOutlet weak var AnswerBox: UILabel!
     @IBOutlet weak var ErrorMessage: UILabel!
     
-    @IBAction func Analyze(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
-        guard TextField == nil else {
-            ErrorMessage.text = ("Please enter your text.")
+        //Analyze the text provided
+        
+    }
+    
+    func Analyze(_ sender: Any) {
+        
+        // Clear out the output label from the last time the Analyze button was pressed
+        AnswerBox.text = ""
+        
+        // Make sure the user puts in an input
+        guard let TextFieldInput = TextField.text, TextFieldInput.count > 0 else {
+            ErrorMessage.text = ("Please enter a phrase to analyze")
             return
         }
         
-        guard let StringTextField = TextField.text else {
-            return
-        }
-        
-        if StringTextField.count > 225 {
+        // Make sure the input is not too long
+        guard TextFieldInput.count > 225 else {
             ErrorMessage.text = ("Please enter a message no more than 255 characters")
             return
         }
         
-        for scalar in StringTextField.unicodeScalars {
+        for scalar in TextFieldInput.unicodeScalars {
             let scalar = (scalar.value)
             
             var happyCounter = 0
@@ -94,10 +97,9 @@ class ViewController: UIViewController {
                 AnswerBox.text = ("unsure")
             }
             
+        }
         
-          }
-        
-       }
-    
     }
+    
+}
 

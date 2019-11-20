@@ -26,9 +26,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Analyze"/>
-                                <connections>
-                                    <action selector="Analyze:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCJ-i2-0dX"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMI-cA-hPd">
                                 <rect key="frame" x="186" y="268" width="0.0" height="0.0"/>
