@@ -31,6 +31,11 @@ class ViewController: UIViewController {
             return
         }
         
+        if StringTextField.count > 225 {
+            ErrorMessage.text = ("Please enter a message no more than 255 characters")
+            return
+        }
+        
         for scalar in StringTextField.unicodeScalars {
             let scalar = (scalar.value)
             
@@ -89,7 +94,6 @@ class ViewController: UIViewController {
                 AnswerBox.text = ("unsure")
             }
             
-            // Help?????????
         
           }
         
