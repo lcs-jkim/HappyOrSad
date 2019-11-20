@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         for scalar in StringTextField.unicodeScalars {
             let scalar = (scalar.value)
             
-            var happycounter = 0
+            var happyCounter = 0
             
             var sadCounter = 0
             
