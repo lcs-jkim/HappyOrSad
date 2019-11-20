@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         for scalar in StringTextField.unicodeScalars {
             let scalar = (scalar.value)
             
-            var happyCounter = 0
+            var happycounter = 0
             
             var sadCounter = 0
             
@@ -61,6 +61,33 @@ class ViewController: UIViewController {
                 happyCounter = 0
             }
             
+            switch scalar {
+            case 622:
+                sadCounter = sadCounter + 1
+                fallthrough
+            case 625:
+                sadCounter = sadCounter + 1
+                fallthrough
+            case 628:
+                sadCounter = sadCounter + 1
+                fallthrough
+            case 629:
+                sadCounter = sadCounter + 1
+                fallthrough
+            case 630:
+                sadCounter = sadCounter + 1
+                fallthrough
+            default:
+                sadCounter = 0
+            }
+            
+            if happyCounter > sadCounter {
+                AnswerBox.text = ("Happy")
+            } else if sadCounter == happyCounter {
+                AnswerBox.text = ("unsure")
+            } else {
+                AnswerBox.text = ("unsure")
+            }
         
           }
         
