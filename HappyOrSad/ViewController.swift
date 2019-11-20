@@ -33,16 +33,38 @@ class ViewController: UIViewController {
         
         for scalar in StringTextField.unicodeScalars {
             let scalar = (scalar.value)
-        }
+            
+            var happyCounter = 0
+            
+            var sadCounter = 0
+            
+            switch scalar {
+            case 601:
+                happyCounter = happyCounter + 1
+                fallthrough
+            case 602:
+                happyCounter = happyCounter + 1
+                fallthrough
+            case 603:
+                happyCounter = happyCounter + 1
+                fallthrough
+            case 604:
+                happyCounter = happyCounter + 1
+                fallthrough
+            case 605:
+                happyCounter = happyCounter + 1
+                fallthrough
+            case 606:
+                happyCounter = happyCounter + 1
+                fallthrough
+            default:
+                happyCounter = 0
+            }
+            
         
-        switch AnswerBox {
-        case:
-            <#code#>
-        default:
-            <#code#>
-        }
+          }
+        
+       }
     
     }
-    
-}
 
