@@ -22,20 +22,24 @@ class ViewController: UIViewController {
     
     @IBAction func Analyze(_ sender: Any) {
         
-        guard let StringTextField = TextField.text else {
+        guard TextField == nil else {
             ErrorMessage.text = ("Please enter your text.")
             return
         }
         
-        for scalar in StringTextField.unicodeScalars {
-            print(scalar.value)
+        guard let StringTextField = TextField.text else {
+            return
         }
         
-        switch StringTextField {
-        case <#pattern#>:
+        for scalar in StringTextField.unicodeScalars {
+            let scalar = (scalar.value)
+        }
+        
+        switch AnswerBox {
+        case:
             <#code#>
         default:
-            AnswerBox.text = ("I'm not sure")
+            <#code#>
         }
     
     }
