@@ -43,24 +43,18 @@ class ViewController: UIViewController {
             let scalar = (scalar.value)
             
             switch scalar {
-            case 601:
+            case 128512:
                 happyCounter = happyCounter + 1
-                fallthrough
             case 602:
                 happyCounter = happyCounter + 1
-                fallthrough
             case 603:
                 happyCounter = happyCounter + 1
-                fallthrough
             case 604:
                 happyCounter = happyCounter + 1
-                fallthrough
             case 605:
                 happyCounter = happyCounter + 1
-                fallthrough
             case 606:
                 happyCounter = happyCounter + 1
-                fallthrough
             default:
                 happyCounter = 0
             }
@@ -68,19 +62,14 @@ class ViewController: UIViewController {
             switch scalar {
             case 622:
                 sadCounter = sadCounter + 1
-                fallthrough
             case 625:
                 sadCounter = sadCounter + 1
-                fallthrough
             case 628:
                 sadCounter = sadCounter + 1
-                fallthrough
             case 629:
                 sadCounter = sadCounter + 1
-                fallthrough
             case 630:
                 sadCounter = sadCounter + 1
-                fallthrough
             default:
                 sadCounter = 0
             }
