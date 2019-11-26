@@ -22,22 +22,17 @@ class ViewController: UIViewController {
         
     }
     
-    func Analyze(_ sender: Any) {
+    @IBAction func AnalyzeText(_ sender: Any) {
         
         // Clear out the output label from the last time the Analyze button was pressed
         AnswerBox.text = ""
         
         // Make sure the user puts in an input
-        guard let TextFieldInput = TextField.text, TextFieldInput.count > 0 else {
-            ErrorMessage.text = ("Please enter a phrase to analyze")
+        guard let TextFieldInput = TextField.text, TextFieldInput.count > 0, TextFieldInput.count < 255 else {
+            ErrorMessage.text = ("Please enter a phrase that is 255 or less characters ")
             return
         }
         
-        // Make sure the input is not too long
-        guard TextFieldInput.count > 225 else {
-            ErrorMessage.text = ("Please enter a message no more than 255 characters")
-            return
-        }
         
         for scalar in TextFieldInput.unicodeScalars {
             let scalar = (scalar.value)
@@ -98,8 +93,7 @@ class ViewController: UIViewController {
             }
             
         }
-        
     }
-    
+
 }
 
