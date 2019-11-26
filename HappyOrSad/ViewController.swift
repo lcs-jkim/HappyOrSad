@@ -33,13 +33,14 @@ class ViewController: UIViewController {
             return
         }
         
+        // Count how many characters are happy or sad in the text
+        
+        var happyCounter = 0
+        
+        var sadCounter = 0
         
         for scalar in TextFieldInput.unicodeScalars {
             let scalar = (scalar.value)
-            
-            var happyCounter = 0
-            
-            var sadCounter = 0
             
             switch scalar {
             case 601:
@@ -84,14 +85,17 @@ class ViewController: UIViewController {
                 sadCounter = 0
             }
             
-            if happyCounter > sadCounter {
-                AnswerBox.text = ("Happy")
-            } else if sadCounter == happyCounter {
-                AnswerBox.text = ("unsure")
-            } else {
-                AnswerBox.text = ("unsure")
-            }
+
             
+        }
+        
+        // Compare the counts and see the overall mood of the message
+        if happyCounter > sadCounter {
+            AnswerBox.text = ("Happy")
+        } else if sadCounter == happyCounter {
+            AnswerBox.text = ("unsure")
+        } else {
+            AnswerBox.text = ("unsure")
         }
     }
 
