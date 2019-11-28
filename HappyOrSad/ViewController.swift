@@ -53,6 +53,10 @@ class ViewController: UIViewController {
                 happyCounter += 1
             case 128518:
                 happyCounter += 1
+            case 9786:
+                happyCounter += 1
+            case 128522:
+                happyCounter += 1
             case 128542:
                 sadCounter += 1
             case 9785:
@@ -65,6 +69,17 @@ class ViewController: UIViewController {
                 sadCounter += 1
             case 128547:
                 sadCounter += 1
+            case 128546:
+                sadCounter += 1
+            case 128532:
+                sadCounter += 1
+            case 128543:
+                sadCounter += 1
+            case 128534:
+                sadCounter += 1
+            case 128555:
+                sadCounter += 1
+            
             default:
                 break
             }
