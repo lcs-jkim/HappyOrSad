@@ -45,36 +45,30 @@ class ViewController: UIViewController {
             switch scalar {
             case 128512:
                 happyCounter = happyCounter + 1
-            case 602:
+            case 128515:
                 happyCounter = happyCounter + 1
-            case 603:
+            case 128516:
                 happyCounter = happyCounter + 1
-            case 604:
+            case 128513:
                 happyCounter = happyCounter + 1
-            case 605:
+            case 128518:
                 happyCounter = happyCounter + 1
-            case 606:
-                happyCounter = happyCounter + 1
-            default:
-                happyCounter = 0
-            }
-            
-            switch scalar {
-            case 622:
+            case 128542:
                 sadCounter = sadCounter + 1
-            case 625:
+            case 9785:
                 sadCounter = sadCounter + 1
-            case 628:
+            case 65039:
                 sadCounter = sadCounter + 1
-            case 629:
+            case 128577:
                 sadCounter = sadCounter + 1
-            case 630:
+            case 128557:
+                sadCounter = sadCounter + 1
+            case 128547:
                 sadCounter = sadCounter + 1
             default:
-                sadCounter = 0
+                break
             }
-            
-
+    
             
         }
         
